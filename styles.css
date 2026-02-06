@@ -1,0 +1,293 @@
+/* Japandi Style - Minimalist Design */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Lato:wght@300;400;700&display=swap');
+
+/* Root Variables */
+:root {
+    --primary-dark: #1a1a1a;
+    --primary-light: #f5f5f5;
+    --neutral-gray: #e8e8e8;
+    --text-muted: #999;
+    --border-color: #1a1a1a;
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--primary-dark);
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.handwriting {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem !important;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.subcard {
+    width: 60px; 
+    height: 60px; 
+    border: 2px solid #1a1a1a; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+p {
+    color: var(--text-muted);
+    font-weight: 300;
+}
+
+/* Navigation */
+.navbar {
+    padding: 1.5rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 300;
+    font-size: 0.95rem;
+    color: var(--primary-dark) !important;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar-nav .nav-link:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--primary-dark);
+}
+
+/* Buttons */
+.btn-dark {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    font-weight: 300;
+    transition: all 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-outline-dark {
+    border-color: var(--primary-dark);
+    color: var(--primary-dark);
+    font-weight: 300;
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: rgba(0, 0, 0, 0.438);
+}
+
+/* Forms */
+.form-control {
+    border: 2px solid var(--border-color);
+    font-weight: 300;
+    border-radius: 0;
+    padding: 0.75rem 1rem;
+}
+
+.form-control:focus {
+    border-color: var(--primary-dark);
+    box-shadow: 0 0 0 0.1rem rgba(26, 26, 26, 0.1);
+}
+
+.form-check-input {
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    width: 1.25rem;
+    height: 1.25rem;
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+/* Product Cards */
+.product-card {
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card button {
+    z-index: 10;
+    padding: 0.5rem 1.5rem;
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+/* Sections */
+section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+/* Footer */
+footer {
+    background-color: #fff;
+    padding-bottom: 3rem !important;
+}
+
+footer h6 {
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+footer ul li {
+    font-size: 0.85rem;
+    font-weight: 300;
+}
+
+footer a {
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    opacity: 0.7;
+}
+
+dialog {
+  width: 400px;
+  max-width: 90%;
+  padding: 20px;
+  border: none;
+  border-radius: 12px;
+  justify-self: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Center vertically & horizontally */
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Optional: smooth animation */
+dialog[open] {
+  animation: fadeIn 0.2s ease-out;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Border Utilities */
+.border-dark {
+    border-color: var(--primary-dark) !important;
+}
+
+.border-secondary-subtle {
+    border-color: var(--neutral-gray) !important;
+}
+
+/* Text Utilities */
+.text-muted {
+    color: var(--text-muted) !important;
+    font-weight: 300;
+}
+
+/* Spacing */
+.container {
+    max-width: 1200px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .handwriting {
+        font-size: 1.8rem !important;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .navbar-nav {
+        margin-top: 1rem;
+    }
+
+    section {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+/* Smooth Transitions */
+* {
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Video Player Styles */
+.video-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.video-container:hover {
+    opacity: 0.9;
+}
+
+/* Modal Styles */
+.btn-close-dark {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    opacity: 1;
+}
+
+.btn-close-dark:focus {
+    box-shadow: none;
+}
+
+/* Accessibility */
+:focus {
+    outline: 2px solid var(--primary-dark);
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .navbar, footer {
+        display: none;
+    }
+}
